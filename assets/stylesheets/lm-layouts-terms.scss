@@ -1,0 +1,47 @@
+.lm-layouts-terms {
+  font-size: 14px;
+}
+.lm-layouts-terms-heading {
+  position: relative;
+  height: 41px;
+  text-indent: 54px;
+  line-height: 41px;
+  letter-spacing: 0.2px;
+  background-color: #66c05d;
+  color: #ffffff;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 41px;
+    height: 41px;
+    background: #4aa541 image-url('images/lm-layouts-terms-heading-icon.png') no-repeat center center;
+  }
+}
+.lm-layouts-terms-list {
+  margin: 0;
+  padding: 17px;
+  background-color: #fbfbfb;
+}
+.lm-layouts-terms-list-item {
+  &:not(:last-child) {
+    padding-bottom: 18px;
+    margin-bottom: 18px;
+    border-bottom: 1px solid #eaeaea;
+  }
+}
+.lm-layouts-terms-term-title {
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+.lm-layouts-terms-term-content {}
+a.lm-layouts-terms-external-link {
+  display: block;
+  margin: 0 6px;
+  padding: 6px 12px;
+  border: 1px solid #efefef;
+  text-align: center;
+  &, &:hover, &:active, &:visited { color: #66c05d; }
+}

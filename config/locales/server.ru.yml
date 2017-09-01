@@ -1,0 +1,5 @@
+ru:
+  site_settings:
+    lm_layouts_terms_data: "Список терминов для сайдбара в формате JSON"
+    lm_layouts_terms_count: "Количество терминов в виджете"
+    lm_layouts_terms_symbols_visible: "Количество символов в термине до спойлера"

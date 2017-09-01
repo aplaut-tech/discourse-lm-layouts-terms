@@ -1,4 +1,10 @@
 plugins:
-  layouts_custom_html:
-    default: ''
+  lm_layouts_terms_data:
+    default: '[{"title":"Мой термин","content":"Длинное и интересное описание термина.}]'
+    client: true
+  lm_layouts_terms_count:
+    default: 2
+    client: true
+  lm_layouts_terms_symbols_visible:
+    default: 133
     client: true
