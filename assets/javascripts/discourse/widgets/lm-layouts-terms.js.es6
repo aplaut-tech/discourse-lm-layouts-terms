@@ -2,6 +2,15 @@ import {createWidget} from 'discourse/widgets/widget';
 import {h} from 'virtual-dom';
 
 
+const arrayShuffle = function (a) {
+  for (let i = a.length; i; i--) {
+    let j = Math.floor(Math.random() * i);
+    [a[i - 1], a[j]] = [a[j], a[i - 1]];
+  }
+  return a;
+}
+
+
 // createWidget('lm-layouts-terms-read-more', {
 //   tagName: 'span.lm-layouts-terms-read-more-link',
 
@@ -24,17 +33,18 @@ export default createWidget('lm-layouts-terms', {
     if (TERMS) {
       return TERMS;
     } else {
-      return TERMS = JSON.parse(this.siteSettings.lm_layouts_terms_data)
-        .sort(() => Math.random() > Math.random())
+      const terms = JSON.parse(this.siteSettings.lm_layouts_terms_data)
         .slice(0, this.siteSettings.lm_layouts_terms_count);
+      arrayShuffle(terms);
+      return TERMS = terms;
     }
   },
 
-  removeSpoiler () {
-    console.log(this.state.spoiled);
-    this.state.spoiled = true;
-    console.log(this.state.spoiled);
-  },
+  // removeSpoiler () {
+  //   console.log(this.state.spoiled);
+  //   this.state.spoiled = true;
+  //   console.log(this.state.spoiled);
+  // },
 
   html () {
     const symbols_visible = this.siteSettings.lm_layouts_terms_symbols_visible;
